@@ -38,7 +38,11 @@
         ```bash
         $ docker-compose exec php bash
         $ composer install
-        $ chmod 777 -R var/cache && chmod 777 -R var/logs && chmod 777 -R var/sessions
+        $ chmod 777 -R var/cache && chmod 777 -R var/logs && mkdir var/sessions && chmod 777 -R var/sessions
+        $ bin/console do:da:cr && bin/console do:sc:up --force
+        $ bin/console do:fi:load
+
+
     
     3. http://symfony.local/
        
