@@ -1,0 +1,10 @@
+/logs
+/.data
+.env
+.idea
+/www/var/sessions/
+/www/var/cache/
+/www/var/logs/
+/www/app/logs/
+/www/app/config/parameters.yml
+/www/vendor/

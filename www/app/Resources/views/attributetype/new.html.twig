@@ -1,0 +1,23 @@
+{% extends 'admin.base.html.twig' %}
+
+{% block body %}
+    <h1>Attribute type creation</h1>
+
+    {{ form_start(form) }}
+
+    <div class="form-group ">
+            {{ form_row(form.name) }}
+    </div>
+    <ul>
+        <li>
+            <input type="submit" value="Create" />
+        </li>
+        <li>
+            <a href="{{ path('attributetype_index') }}">Back to the list</a>
+        </li>
+    </ul>
+
+    {{ form_end(form) }}
+
+
+{% endblock %}

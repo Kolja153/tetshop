@@ -1,0 +1,36 @@
+{% extends 'admin.base.html.twig' %}
+
+{% block body %}
+    <h1>Attribute types list</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for attributeType in attributeTypes %}
+            <tr>
+                <td><a href="{{ path('attributetype_edit', { 'id': attributeType.id }) }}">{{ attributeType.id }}</a></td>
+                <td>{{ attributeType.name }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('attributetype_edit', { 'id': attributeType.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('attributetype_new') }}">Create a new attribute type</a>
+        </li>
+    </ul>
+{% endblock %}
